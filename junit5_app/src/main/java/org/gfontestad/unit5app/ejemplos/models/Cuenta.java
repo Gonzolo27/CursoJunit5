@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 public class Cuenta {
     private String nombrePersona;
     private BigDecimal saldo; //cuando se trabaja con dineros, es mejor usar el tipo BigDecimal, es más preciso y eficiente que int, float, doubles...
+    private Banco banco;
 
     public Cuenta(String nombrePersona, BigDecimal saldo) {
         this.nombrePersona = nombrePersona;
@@ -27,6 +28,14 @@ public class Cuenta {
 
     public void setSaldo(BigDecimal saldo) {
         this.saldo = saldo;
+    }
+
+    public Banco getBanco() {
+        return banco;
+    }
+
+    public void setBanco(Banco banco) {
+        this.banco = banco;
     }
 
     public void debito(BigDecimal monto) {
